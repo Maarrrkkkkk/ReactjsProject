@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.line {
+  height: 5px;
+  margin-top: 5px;
+  background: linear-gradient(to right, #5CE1E6 45%, transparent 55%),
+    linear-gradient(to right, transparent 45%, #5CE1E6 55%);
+  background-size: 200% 100%;
+  animation: lineFlow 3s linear infinite;
+  border: none;
+  min-width: 250px;
+}
+
+.line span {
+  @apply inline-block font-bold text-white text-sm border-b-2 border-white;
+}
+
+.squircle {
+  border-radius: 50px;
+}
+
+.error-message {
+  color: red;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px #5CE1E6, 0 0 10px #5CE1E6 0 0 15px #5CE1E6,
+      0 0 20px #5CE1E6, 0 0 25px #5CE1E6, 0 0 30px #5CE1E6;
+  }
+  100% {
+    box-shadow: 0 0 10px #5CE1E6, 0 0 20px #5CE1E6, 0 0 30px #5CE1E6,
+      0 0 40px #5CE1E6, 0 0 50px #5CE1E6, 0 0 60px #5CE1E6;
+  }
+}
+
+.shadow-green {
+  animation: pulse 1.5s infinite alternate; /* Adjust animation duration as needed */
+}
+.bg-custom-blue {
+  background-color: #5CE1E6;
+}
+
+.bg-custom-blue:hover {
+  background-color: #5CE1E6;
+}
+.text-custom-blue {
+  color: #5CE1E6;
+}
+.hover-text-custom-blue:hover {
+  color: #5CE1E6;
+}
